@@ -14,21 +14,34 @@ fn main() {
     let b: f64 = 2.34;
     println!("{b}");
 
+    //shadowing
+
+    let x = 5;
+
+    let x = x + 1;
+
+    {
+        let x = x * 2;
+        println!("The value of x in the inner scope is: {x}");
+    }
+
+    println!("The value of x is: {x}");
+
     //bool
     let c:bool = false;
     println!("{c}");
 
-    const arr:[i32;5] = [1,2,3,4,4];
-    let first = arr[0];
-    println!("{}",first);
+    // const arr:[i32;5] = [1,2,3,4,4];
+    // let first = arr[0];
+    // println!("{}",first);
 
 
-    let x:(i32,f64,u8) = (500, 6.4, 1);
-    let five = x.0;
-    println!("{}",five);
+    // let x:(i32,f64,u8) = (500, 6.4, 1);
+    // let five = x.0;
+    // println!("{}",five);
 
-    for number in (1..4) {
-        println!("{number}!");
-    }
+    // for number in (1..4) {
+    //     println!("{number}!");
+    // }
 
 }
